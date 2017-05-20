@@ -41,6 +41,8 @@ function MainController($scope,UrlShortenerService,$interval) {
     localStorage.setItem('urlHistory',JSON.stringify($scope.userHistory));
   }
   setInterval(function(){
+    if($scope.analyticsView) {
       $scope.getClicksforUrl()
+    }
   },10000);
 }
