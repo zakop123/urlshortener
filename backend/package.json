@@ -1,0 +1,17 @@
+{
+  "name": "urlshortener",
+  "version": "1.0.0",
+  "description": "Backend for Url Shortener web application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zohaib Amjad",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "goo.gl": "^0.1.4"
+  }
+}

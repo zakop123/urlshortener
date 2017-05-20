@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="urlshortener" class="no-js">
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>URL Shortener</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="app/style.css">
+</head>
+<body class="background">
+  <div class="jumbotron">
+    <h1> URL Shortener </h1>
+    <p>The best place to generate shortened urls</p>
+  </div>
+  <!-- Main view for templates -->
+  <div data-ng-view="" class="container"></div>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="bower_components/angular-tablesort/js/angular-tablesort.js"></script>
+  <script type="text/javascript" src="app/app.js"></script>
+  <script type="text/javascript" src="app/controller.js"></script>
+  <script type="text/javascript" src="app/factory.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

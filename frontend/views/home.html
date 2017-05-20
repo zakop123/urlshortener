@@ -1,0 +1,34 @@
+<div class="container">
+  <form class="vertical-center col-sm-offset-2 col-sm-8" ng-show="!analyticsView">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Type or copy the link to shorten" ng-model="inputUrl" autofocus>
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-success" ng-click="getShortUrl()">Shorten</button>
+      </span>
+    </div>
+    <div class="col-sm-offset-3 form-group vertical-center">
+      <label> Your Shortened URL: </label>
+      <a href="{{outputUrl}}" target="_blank">{{outputUrl}}</a>
+    </div>
+    <button type="submit" class="col-sm-offset-5 btn btn-primary" ng-click="getClicksforUrl()">Analytics</button>
+  </form>
+  <div ng-show="analyticsView">
+    <table class="table table-striped" ts-wrapper>
+      <thead>
+        <tr>
+          <th ts-criteria="long_url|lowercase">Your URL</th>
+          <th ts-criteria="short_url|lowercase">Short URL</th>
+          <th ts-criteria="clicks|parseInt">Number of clicks</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="entry in userHistory" ts-repeat ts-hide-no-data>
+        <td>{{entry.long_url}}</td>
+        <td>{{entry.short_url}}</td>
+        <td>{{entry.clicks}}</td>
+      </tr>
+    </tbody>
+    </table>
+    <button type="submit" class="col-sm-offset-5 btn btn-primary" ng-click="analyticsView = false;">Home</button>
+  </div>
+</div>
