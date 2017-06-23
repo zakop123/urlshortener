@@ -11,7 +11,7 @@ The Project has only a couple of pre-requisites which must be installed first,
 
 ## Getting Started
 
-  1. `git clone https://github.com/zakop123/urlshortener.git urlshortener`
+  1. `git clone https://github.com/zakopz/urlshortener.git urlshortener`
   2. `cd urlshortener/backend`
   3. `npm install`
   4. `cd ../frontend`
